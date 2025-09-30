@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --background: #fff7fb;
+    /* soft rose background */
+    --foreground: #352a31;
+    /* deep plum text */
+    --accent: #f7c7e3;
+    /* pastel pink */
+    --accent-2: #d9c7f7;
+    /* pastel purple */
+    --accent-3: #c7f0f7;
+    /* soft aqua */
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #1a1418;
+        --foreground: #f2eaf0;
+        --accent: #7a3d61;
+        --accent-2: #54406e;
+        --accent-3: #2d5962;
+    }
+}
+
+body {
+    color: var(--foreground);
+    background: var(--background);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
+}
